@@ -126,130 +126,7 @@ function changeProject_updateGateway()
 	location.href  = url;
 }
 
-function checkGateaddress()
-{
-	console.log("检查。。");
-	var gateaddress = $("#gateaddress").val();
-	var gid = $("#gid").val();
-	console.log(gateaddress);
-	$.ajax({   
-	            url:'checkGateaddress',//这里是你的action或者servlert的路径地址   
-	            type:'post', //数据发送方式   
-	            async:false,
-	            data: { "gateaddress":gateaddress,"id":gid},
-	            dataType:'json',
-	            error: function(msg)
-	            { //失败   
-	            	console.log('post失败');   
-	            },   
-	            success: function(msg)
-	            { //成功
-					 if(msg!=null)
-					 {
-					 	if(gateaddress!=parseInt(msg.gateaddress))
-					 	{
-					 		alert(msg.msg);
-						 	
-						 	
-						 	if(msg.gateaddress!=null&&msg.gateaddress!=0)
-						 	{
-						 		$(document).ready(function(){ 
-						 		console.log(msg.gateaddress);
-						 			$("#gateaddress").val(msg.gateaddress);
-						 		});
-						 	}else
-						 	{
-						 		$("#gateaddress").val("");
-						 	}
-					 	}
-					 }
-				}
-			});
-}
 
-function checkChannel()
-{
-	var gid = $("#gid").val();
-	var canUpdate = false;
-	$.ajax({   
-	            url:'checkCanUpdateChannel',//这里是你的action或者servlert的路径地址   
-	            type:'post', //数据发送方式   
-	            async:false,
-	            data: {"id":gid},
-	            dataType:'json',
-	            error: function(msg)
-	            { //失败   
-	            	console.log('post失败');   
-	            },   
-	            success: function(msg)
-	            { //成功
-	            	console.log(msg);
-	            	if(msg!=null)
-	            	{
-		            	if(msg.gateaddress!=null&&parseInt(msg.gateaddress)>0)
-		            	{
-		            		canUpdate = true;
-		            	}else
-		            	{
-		            		alert("当前网关地址不存在，修改通道无效");
-		            		$(document).ready(function(){ 
-									   $("#channel").val(msg.channel);
-									}); 
-		            	}
-	            	}else
-	            	{
-	            		//alert("数据加载错误，请重新加载。");
-	            	}
-	            	
-				}
-			});
-	
-	if(canUpdate)
-	{
-		//检查通道是否修改过
-		var newDate = $("#channel").val();
-		console.log(oldDate,newDate);
-		if(parseInt(oldDate)!=parseInt(newDate))
-		{
-			$("#isChannelUpdated").val(1);
-		}
-		
-		var channel = $("#channel").val();
-		
-		$.ajax({   
-		            url:'checkChannel',//这里是你的action或者servlert的路径地址   
-		            type:'post', //数据发送方式   
-		            async:false,
-		            data: { "channel":channel,"id":gid},
-		            dataType:'json',
-		            error: function(msg)
-		            { //失败   
-		            	console.log('post失败');   
-		            },   
-		            success: function(msg)
-		            { //成功
-		            	console.log(msg);
-						 if(msg!=null)
-						 {
-						 	if(channel!=parseInt(msg.channel))
-					 		{
-							 	alert(msg.msg);
-							 	if(msg.channel!=null&&msg.channel!=0)
-							 	{
-							 		$(document).ready(function(){ 
-									   $("#channel").val(msg.channel);
-									}); 
-							 	}else
-							 	{
-							 		$("#channel").val("");
-							 	}
-							 }
-						 }
-					}
-				});
-	}
-	
-}
 
 
 function setDataUpdated()
@@ -262,32 +139,6 @@ function setDataUpdated()
 	}
 }
 
-//获取最新的一个温度数据
-function getNewTemp()
-{
-	console.log("getNewTemp。。");
-	var gateaddress = $("#gateaddress").val();
-	var gid = $("#gid").val();
-	console.log(gateaddress);
-	$.ajax({   
-	            url:'checkGateaddress',//这里是你的action或者servlert的路径地址   
-	            type:'post', //数据发送方式   
-	            async:false,
-	            data: { "gateaddress":gateaddress,"id":gid},
-	            dataType:'json',
-	            error: function(msg)
-	            { //失败   
-	            	console.log('post失败');   
-	            },   
-	            success: function(msg)
-	            { //成功
-					 if(msg!=null)
-					 {
-					 	alert(msg.msg);
-					 }
-				}
-			});
-}
 
 
 function checkFloat()
@@ -385,7 +236,7 @@ function checkUsername()
 	            url:'checkUsername',//这里是你的action或者servlert的路径地址   
 	            type:'post', //数据发送方式   
 	            async:false,
-	            data: { "username":username},
+	            data:{"username":username},
 	            dataType:'json',
 	            error: function(msg)
 	            { //失败   

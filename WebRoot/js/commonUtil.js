@@ -38,7 +38,7 @@ function deleteAllCheckedUnits()
 			            url:'deleteUnits',//这里是你的action或者servlert的路径地址   
 			            type:'post', //数据发送方式   
 			            async:false,
-			            data: {"checkedIDs":checkedIDs},
+			            data:{"checkedIDs":checkedIDs},
 			            dataType:'json',
 			            error: function(msg)
 			            { //失败   
@@ -70,7 +70,7 @@ function deleteAllCheckedUserRoles()
 			            url:'deleteUserRoles',//这里是你的action或者servlert的路径地址   
 			            type:'post', //数据发送方式   
 			            async:false,
-			            data: {"checkedIDs":checkedIDs},
+			            data:{"checkedIDs":checkedIDs},
 			            dataType:'json',
 			            error: function(msg)
 			            { //失败   
@@ -103,7 +103,7 @@ function deleteAllCheckedPersons()
 			            url:'deletePersons',//这里是你的action或者servlert的路径地址   
 			            type:'post', //数据发送方式   
 			            async:false,
-			            data: {"checkedIDs":checkedIDs},
+			            data:{"checkedIDs":checkedIDs},
 			            dataType:'json',
 			            error: function(msg)
 			            { //失败   
@@ -133,7 +133,7 @@ function deleteLawcase(lawid)
 			            url:'deleteLawcase',//这里是你的action或者servlert的路径地址   
 			            type:'post', //数据发送方式   
 			            async:false,
-			            data: {"lawid":lawid},
+			            data:{"lawid":lawid},
 			            dataType:'json',
 			            error: function(msg)
 			            { //失败   
@@ -157,7 +157,7 @@ function deleteTroubleshooting(troubid)
 			            url:'deleteTroubleshooting',//这里是你的action或者servlert的路径地址   
 			            type:'post', //数据发送方式   
 			            async:false,
-			            data: {"troubid":troubid},
+			            data:{"troubid":troubid},
 			            dataType:'json',
 			            error: function(msg)
 			            { //失败   
@@ -181,7 +181,7 @@ function deleteJudge(jid)
 			            url:'deleteJudge',//这里是你的action或者servlert的路径地址   
 			            type:'post', //数据发送方式   
 			            async:false,
-			            data: {"jid":jid},
+			            data:{"jid":jid},
 			            dataType:'json',
 			            error: function(msg)
 			            { //失败   
@@ -204,7 +204,7 @@ function deleteOtherperson(otherid)
 			            url:'deleteOtherperson',//这里是你的action或者servlert的路径地址   
 			            type:'post', //数据发送方式   
 			            async:false,
-			            data: {"otherid":otherid},
+			            data:{"otherid":otherid},
 			            dataType:'json',
 			            error: function(msg)
 			            { //失败   
@@ -236,7 +236,7 @@ function deleteAllCheckedPnotices()
 			            url:'deletePnotices',//这里是你的action或者servlert的路径地址   
 			            type:'post', //数据发送方式   
 			            async:false,
-			            data: {"checkedIDs":checkedIDs},
+			            data:{"checkedIDs":checkedIDs},
 			            dataType:'json',
 			            error: function(msg)
 			            { //失败   
@@ -267,7 +267,7 @@ function deleteAllCheckedSuccessexamples()
 			            url:'deleteSuccessexamples',//这里是你的action或者servlert的路径地址   
 			            type:'post', //数据发送方式   
 			            async:false,
-			            data: {"checkedIDs":checkedIDs},
+			            data:{"checkedIDs":checkedIDs},
 			            dataType:'json',
 			            error: function(msg)
 			            { //失败   
@@ -299,7 +299,7 @@ function deleteAllCheckedInjurycases()
 			            url:'deleteInjurycases',//这里是你的action或者servlert的路径地址   
 			            type:'post', //数据发送方式   
 			            async:false,
-			            data: {"checkedIDs":checkedIDs},
+			            data:{"checkedIDs":checkedIDs},
 			            dataType:'json',
 			            error: function(msg)
 			            { //失败   
