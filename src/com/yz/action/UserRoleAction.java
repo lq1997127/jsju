@@ -31,7 +31,11 @@ import com.yz.service.IUserRoleService;
 import com.yz.util.ConvertUtil;
 import com.yz.util.DateTimeKit;
 import com.yz.vo.AjaxMsgVO;
-
+/**
+ * 这是示例action 
+ * @author Administrator
+ *
+ */
 @Component("userRoleAction")
 @Scope("prototype")
 public class UserRoleAction extends ActionSupport implements RequestAware,
